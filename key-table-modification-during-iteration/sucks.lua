@@ -33,7 +33,7 @@ local keys = {
 
 keys["3"]="3"
 
-local pairs = require(arg[1] or "_G").pairs
+local solution = require(arg[1] or "_G")
 -- "_G" (by default)
 -- "rwpairs"
 -- pairs("mini.tcopy"(t))
@@ -42,7 +42,7 @@ local pairs = require(arg[1] or "_G").pairs
 local check = {}
 
 -- allow to use number instead of text
-for k,v in pairs(keys) do
+for k,v in solution.pairs(keys) do
 	print("write key: ", tostring(v))
 	check[tostring(v)] = (check[tostring(v)] or 0) + 1
 	keys[tostring(v)] = v
